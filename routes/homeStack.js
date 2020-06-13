@@ -3,6 +3,7 @@ import Home from '../screens/home.js'
 import ReviewDetails from '../screens/reviewDetails.js';
 import Header from '../shared/header'
 import React from 'react'
+import { Image } from 'react-native'
 
 const screens = {
     Home: {
@@ -25,10 +26,10 @@ const screens = {
 const homeStack = createStackNavigator(screens, {
     defaultNavigationOptions: {
         headerStyle: {
-            backgroundColor: 'orange',
             height: 80,
         },
         headerTintColor: '#333',
+        headerBackground: () => <Image source={require('../images/game_bg.png')} style={{height:'100%'}}/>,
     }
 });
 
